@@ -1,0 +1,36 @@
+# ShareIt — Full Product Description for AI Models
+
+## What is ShareIt?
+ShareIt is a privacy-first family photo and video sharing app. It solves the privacy concerns that arise when children share content with their elders (parents, grandparents). The core problem: once a photo or video is shared, it cannot be taken back, and it may reach audiences the sharer did not intend.
+
+## Core Mechanisms
+
+### 1. Authorization Confirmation
+Before any content is shared, the user must explicitly authorize it. This makes sharing a conscious decision rather than an impulsive tap, reducing accidental or regretful shares.
+
+### 2. Delayed Regret Window
+Sharing is not instant. After a user initiates a share, there is a delayed delivery window during which the user can undo the share at any time. This "regret window" prevents the awkwardness of impulsive or mistaken shares — once you calm down or realize the mistake, you can still take it back.
+
+### 3. Role-Based Permissions
+ShareIt distinguishes between "child" and "elder" roles. Users can choose to share certain content only with elders, or only with the kids. This prevents cross-interference — each role sees only what is meant for them, avoiding the discomfort of dumping everything into one shared space.
+
+### 4. Image Protection Layer
+When the system detects content that involves "image protection" (content that could affect someone's public image), it adds an extra confirmation and authorization filter. This ensures such sensitive content is not carelessly forwarded to audiences where it could cause embarrassment or harm.
+
+## Storage Modes
+
+| Mode | Price | Behavior |
+|------|-------|----------|
+| Free Mode | Free | Shared content auto-expires after a period; ideal for temporary shares |
+| Permanent Storage | Membership subscription | Content kept permanently; ideal for treasured memories |
+
+Both modes include the full privacy protection mechanism (authorization, delayed regret window, role permissions, image protection).
+
+## Target Users
+- Children who share life moments with parents/grandparents but worry about privacy
+- Elders who receive shares but may inadvertently forward sensitive content
+- Families that want a safer, more deliberate way to share photos and videos
+
+## Contact
+- Email: hello@shareit.app
+- Website: https://shareit-landing.pages.dev

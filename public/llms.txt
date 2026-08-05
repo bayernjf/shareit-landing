@@ -1,0 +1,16 @@
+# ShareIt
+
+> ShareIt is a privacy-first family photo and video sharing app.
+
+ShareIt is a privacy-first family photo and video sharing app that makes sharing between children and elders safer. Core mechanisms: content requires authorization before sharing, with a delayed regret window so you can undo; child and elder roles are separated for selective sharing; image-sensitive content gets an extra confirmation layer. Offers free expiring storage and permanent member storage.
+
+## Key Features
+- Delayed confirmation delivery: undo with one tap during the regret window
+- Role-based permissions: direct content to the right role without cross-noise
+- Image protection layer: extra confirmation and authorization filtering
+- Flexible storage modes: free auto-expiring, or permanent member storage
+
+## Links
+- [中文站](https://shareit-landing.pages.dev/zh)
+- [English](https://shareit-landing.pages.dev/en)
+- [Full docs for AI](https://shareit-landing.pages.dev/llms-full.txt)
