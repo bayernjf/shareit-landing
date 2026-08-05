@@ -1,0 +1,26 @@
+---
+import { useTranslations } from '../../i18n/utils';
+import Icon from '../Icon.astro';
+const tr = useTranslations(Astro.url);
+---
+
+<section class="py-20 sm:py-24">
+  <div class="container">
+    <div class="mx-auto max-w-2xl text-center">
+      <span class="section-eyebrow">{tr.painEyebrow}</span>
+      <h2 class="mt-4 text-3xl font-bold tracking-tight text-ink-900 sm:text-4xl">{tr.painTitle}</h2>
+      <p class="mt-4 text-lg text-ink-500">{tr.painSubtitle}</p>
+    </div>
+    <div class="mt-12 grid gap-6 md:grid-cols-3">
+      {tr.painPoints.map((item) => (
+        <article class="card flex flex-col items-start">
+          <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-brand-50 text-brand-600">
+            <Icon name={item.icon} size={26} />
+          </span>
+          <h3 class="mt-4 text-lg font-semibold text-ink-900">{item.title}</h3>
+          <p class="mt-2 text-sm leading-relaxed text-ink-500">{item.desc}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,28 @@
+---
+import { useTranslations } from '../../i18n/utils';
+const tr = useTranslations(Astro.url);
+const locale = tr.htmlLang === 'zh-CN' ? 'zh' : 'en';
+---
+
+<section class="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white">
+  <div class="container relative py-20 sm:py-28">
+    <div class="mx-auto max-w-3xl text-center">
+      <span class="section-eyebrow">{tr.heroEyebrow}</span>
+      <h1 class="mt-6 text-4xl font-bold tracking-tight text-ink-900 sm:text-5xl md:text-6xl">
+        {tr.heroTitle}
+        <span class="block text-brand-500">{tr.heroHighlight}</span>
+      </h1>
+      <p class="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-ink-500">
+        {tr.heroSubtitle}
+      </p>
+      <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <a href={`/${locale}#features`} class="btn-primary">
+          {tr.heroPrimaryCta}
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href={`/${locale}#contact`} class="btn-secondary">{tr.heroSecondaryCta}</a>
+      </div>
+      <p class="mt-4 text-xs text-ink-400">{tr.heroNote}</p>
+    </div>
+  </div>
+</section>
