@@ -1,0 +1,25 @@
+{
+  "name": "shareit-landing",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "description": "ShareIt landing page - privacy-first family photo/video sharing",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "astro": "^5.6.1",
+    "@astrojs/sitemap": "^3.3.0",
+    "@astrojs/tailwind": "^5.1.5",
+    "astro-icon": "^1.1.5",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.8.2"
+  }
+}
