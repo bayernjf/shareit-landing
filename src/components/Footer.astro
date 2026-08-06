@@ -46,8 +46,10 @@ const year = new Date().getFullYear();
     <div class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-ink-200 pt-6 text-xs text-ink-400 sm:flex-row">
       <p>&copy; {year} {tr.footerCopyright}</p>
       <div class="flex gap-4">
+        <a href="https://github.com/bayernjf/shareit" target="_blank" rel="noopener noreferrer" class="hover:text-ink-600">GitHub</a>
         <a href={`/${locale}/privacy`} class="hover:text-ink-600">{tr.footerLegalPrivacy}</a>
         <a href={`/${locale}/terms`} class="hover:text-ink-600">{tr.footerLegalTerms}</a>
+        <a href="https://bayjf.com" target="_blank" rel="noopener noreferrer" class="hover:text-ink-600">BayJF</a>
       </div>
     </div>
   </div>
