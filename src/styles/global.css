@@ -1,6 +1,51 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  /* 暖色调，贴合家庭分享主题 */
+  --color-brand-50: #fdf6f0;
+  --color-brand-100: #faead9;
+  --color-brand-200: #f4d0ad;
+  --color-brand-300: #edb079;
+  --color-brand-400: #e58a4f;
+  --color-brand-500: #dc6f30;
+  --color-brand-600: #cc5725;
+  --color-brand-700: #a94121;
+  --color-brand-800: #863721;
+  --color-brand-900: #6c301d;
+
+  --color-ink-50: #f7f7f6;
+  --color-ink-100: #e3e3e0;
+  --color-ink-200: #c7c7c2;
+  --color-ink-300: #a3a29c;
+  --color-ink-400: #7d7c75;
+  --color-ink-500: #63625c;
+  --color-ink-600: #4d4c47;
+  --color-ink-700: #3f3e3a;
+  --color-ink-800: #363531;
+  --color-ink-900: #1f1f1c;
+
+  --font-sans: system-ui, -apple-system, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+/* Tailwind v4 移除了 v3 的 container 配置，这里复刻原行为：居中 + 内边距 + 2xl 上限 1152px */
+@utility container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1152px;
+  }
+}
 
 @layer base {
   html {

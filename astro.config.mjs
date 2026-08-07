@@ -1,7 +1,7 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import icon from 'astro-icon';
 
 // 部署域名（先用 pages.dev 默认域名，后续绑定自定义域名时改这里）
@@ -19,7 +19,6 @@ export default defineConfig({
     },
   },
   integrations: [
-    tailwind({ applyBaseStyles: false }),
     sitemap({
       i18n: {
         defaultLocale: 'zh',
@@ -33,6 +32,9 @@ export default defineConfig({
       iconDir: 'src/icons',
     }),
   ],
+  vite: {
+    plugins: [tailwindcss()],
+  },
   prefetch: {
     prefetchAll: true,
   },
