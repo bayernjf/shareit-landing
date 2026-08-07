@@ -8,9 +8,11 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  /** 页面相对路径，不含 locale 前缀，如 '' 或 'privacy'，用于 canonical/hreflang */
+  path?: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, path } = Astro.props;
 const tr = useTranslations(Astro.url);
 const locale = tr.htmlLang === 'zh-CN' ? 'zh' : 'en';
 ---
@@ -23,7 +25,7 @@ const locale = tr.htmlLang === 'zh-CN' ? 'zh' : 'en';
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#dc6f30" />
-    <SEO locale={locale} title={title} description={description} />
+    <SEO locale={locale} path={path} title={title} description={description} />
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body>

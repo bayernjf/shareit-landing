@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Privacy Policy | ShareIt';
+const description = 'Privacy Policy of ShareIt: how we handle information related to your visit.';
+---
+
+<BaseLayout title={title} description={description} path="privacy">
+  <section class="container py-16 md:py-20">
+    <div class="mx-auto max-w-3xl">
+      <h1 class="text-3xl font-bold text-ink-900 sm:text-4xl">Privacy Policy</h1>
+      <p class="mt-3 text-sm text-ink-400">Last updated: August 7, 2026 · Effective: August 7, 2026</p>
+
+      <div class="mt-10 space-y-8 text-sm leading-7 text-ink-600">
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">1. Overview</h2>
+          <p class="mt-2">
+            ShareIt is a privacy-first family photo and video sharing app, and this site (shareit-landing.pages.dev) is its product introduction website. Protecting privacy is at the core of what ShareIt stands for, and this site follows the same principle. This policy explains how information related to your visit is handled. By using the Site you agree to the terms of this policy.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">2. Information We Handle</h2>
+          <ul class="mt-2 list-disc space-y-1 pl-5">
+            <li>The Site is static, offers no account registration, and does not actively collect personally identifiable information such as names or email addresses.</li>
+            <li>The hosting platform (Cloudflare Pages) may record basic access logs (IP address, User-Agent, etc.) under its own policies, outside our control.</li>
+            <li>If analytics are enabled in the future, only anonymized usage statistics (page views, referrers, etc.) will be used, never to identify individuals.</li>
+            <li>Photos, videos, and other content you share inside the ShareIt product are handled by the product's own privacy mechanisms (delayed confirmation, role-based permissions, image protection, etc.) and are not collected by this Site.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">3. Cookies & Local Storage</h2>
+          <p class="mt-2">
+            The Site may use browser cookies or localStorage to remember interface preferences such as language. These are used solely to improve browsing and never for cross-site tracking. You can disable or clear them in your browser settings.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">4. Third-Party Links</h2>
+          <p class="mt-2">
+            The Site contains links to third-party websites such as GitHub. Their privacy practices are not covered by this policy; please refer to their own policies.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">5. Children</h2>
+          <p class="mt-2">
+            The Site is not directed at children under 14, and we do not knowingly collect personal information from them. ShareIt is designed for families; if minors use the product, we recommend doing so under parental supervision.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">6. Changes</h2>
+          <p class="mt-2">
+            This policy may be updated as the product evolves. Changes will be posted on this page with an updated revision date.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">7. Contact</h2>
+          <p class="mt-2">
+            Questions about this policy can be raised via Issues on our
+            <a href="https://github.com/bayernjf/shareit" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:text-brand-700">GitHub repository</a>.
+          </p>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
