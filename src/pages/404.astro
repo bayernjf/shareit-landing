@@ -6,8 +6,8 @@ const tr = useTranslations(Astro.url);
 const isZh = tr.htmlLang === 'zh-CN';
 const locale = isZh ? 'zh' : 'en';
 const title = isZh
-  ? `404 — 页面不存在 | ${tr.siteShortName}`
-  : `404 — Page Not Found | ${tr.siteShortName}`;
+  ? `404: 页面不存在 | ${tr.siteShortName}`
+  : `404: Page Not Found | ${tr.siteShortName}`;
 ---
 
 <BaseLayout title={title}>
