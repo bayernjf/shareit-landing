@@ -1,7 +1,8 @@
 ---
-import { useTranslations } from '../../i18n/utils';
+import { useTranslations, localizedPath } from '../../i18n/utils';
 const tr = useTranslations(Astro.url);
 const locale = tr.htmlLang === 'zh-CN' ? 'zh' : 'en';
+const homePath = localizedPath('', locale);
 ---
 
 <section class="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white">
@@ -16,11 +17,11 @@ const locale = tr.htmlLang === 'zh-CN' ? 'zh' : 'en';
         {tr.heroSubtitle}
       </p>
       <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-        <a href={`/${locale}#features`} class="btn-primary">
+        <a href={`${homePath}#features`} class="btn-primary">
           {tr.heroPrimaryCta}
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
         </a>
-        <a href={`/${locale}#contact`} class="btn-secondary">{tr.heroSecondaryCta}</a>
+        <a href={`${homePath}#contact`} class="btn-secondary">{tr.heroSecondaryCta}</a>
       </div>
       <p class="mt-4 text-xs text-ink-400">{tr.heroNote}</p>
     </div>

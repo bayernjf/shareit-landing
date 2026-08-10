@@ -1,20 +1,21 @@
 ---
-import { useTranslations } from '../i18n/utils';
+import { useTranslations, localizedPath } from '../i18n/utils';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 
 const tr = useTranslations(Astro.url);
 const locale = tr.htmlLang === 'zh-CN' ? 'zh' : 'en';
+const homePath = localizedPath('', locale);
 
 const navItems = [
-  { href: `/${locale}#features`, label: tr.navFeatures },
-  { href: `/${locale}#faq`, label: tr.navFaq },
-  { href: `/${locale}#contact`, label: tr.navContact },
+  { href: `${homePath}#features`, label: tr.navFeatures },
+  { href: `${homePath}#faq`, label: tr.navFaq },
+  { href: `${homePath}#contact`, label: tr.navContact },
 ];
 ---
 
 <header class="sticky top-0 z-40 border-b border-ink-100 bg-white/80 backdrop-blur-md">
   <div class="container flex h-16 items-center justify-between">
-    <a href={`/${locale}`} class="flex items-center gap-2 font-semibold text-ink-900" aria-label="ShareIt">
+    <a href={homePath} class="flex items-center gap-2 font-semibold text-ink-900" aria-label="ShareIt">
       <span class="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-500 text-white">
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>
@@ -34,7 +35,7 @@ const navItems = [
     <div class="flex items-center gap-2">
       <LanguageSwitcher />
       <a href="https://bayjf.com" target="_blank" rel="noopener noreferrer" class="hidden rounded-lg px-3 py-2 text-sm text-ink-600 transition hover:bg-ink-50 hover:text-ink-900 md:inline-flex">BayJF</a>
-      <a href={`/${locale}#contact`} class="btn-primary hidden sm:inline-flex">{tr.navCta}</a>
+      <a href={`${homePath}#contact`} class="btn-primary hidden sm:inline-flex">{tr.navCta}</a>
       <button
         id="menu-toggle"
         class="inline-flex h-9 w-9 items-center justify-center rounded-lg text-ink-700 hover:bg-ink-50 md:hidden"
@@ -47,14 +48,14 @@ const navItems = [
     </div>
   </div>
 
-  <!-- 移动端菜单 -->
+  <!-- Mobile menu -->
   <nav id="mobile-menu" class="hidden border-t border-ink-100 bg-white md:hidden" aria-label="Mobile navigation">
     <div class="container flex flex-col py-3">
       {navItems.map((item) => (
         <a href={item.href} class="rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-ink-50">{item.label}</a>
       ))}
       <a href="https://bayjf.com" target="_blank" rel="noopener noreferrer" class="rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-ink-50">BayJF</a>
-      <a href={`/${locale}#contact`} class="btn-primary mt-2">{tr.navCta}</a>
+      <a href={`${homePath}#contact`} class="btn-primary mt-2">{tr.navCta}</a>
     </div>
   </nav>
 </header>

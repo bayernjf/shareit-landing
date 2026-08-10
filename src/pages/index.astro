@@ -1,17 +1,10 @@
 ---
-// 根路径：静态构建下用 meta refresh + 客户端跳转，根据浏览器语言重定向
-const accept = Astro.request.headers.get('accept-language') ?? '';
-const isZh = /^zh/i.test(accept.trim()) || !/en/i.test(accept);
-const target = isZh ? '/zh' : '/en';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Home from '../components/sections/Home.astro';
+import { useTranslations } from '../i18n/utils';
+const tr = useTranslations(Astro.url);
 ---
-<html lang={isZh ? 'zh-CN' : 'en-US'}>
-  <head>
-    <meta charset="utf-8" />
-    <title>ShareIt</title>
-    <meta http-equiv="refresh" content={`0; url=${target}`} />
-    <link rel="canonical" href={target} />
-  </head>
-  <body>
-    <a href={target}>ShareIt</a>
-  </body>
-</html>
+
+<BaseLayout title={tr.siteName} description={tr.siteDescription}>
+  <Home />
+</BaseLayout>

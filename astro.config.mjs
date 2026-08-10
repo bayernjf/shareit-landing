@@ -12,16 +12,16 @@ export default defineConfig({
   output: 'static',
   i18n: {
     locales: ['zh', 'en'],
-    defaultLocale: 'zh',
+    defaultLocale: 'en',
     routing: {
-      prefixDefaultLocale: true,
-      redirectToDefaultLocale: true,
+      prefixDefaultLocale: false,
+      redirectToDefaultLocale: false,
     },
   },
   integrations: [
     sitemap({
       i18n: {
-        defaultLocale: 'zh',
+        defaultLocale: 'en',
         locales: {
           zh: 'zh-CN',
           en: 'en-US',
