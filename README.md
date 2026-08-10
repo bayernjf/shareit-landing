@@ -9,7 +9,7 @@ ShareIt 是一款隐私优先的家庭照片/视频私密分享 App，本仓库�
 | 框架 | Astro 5（`astro ^5.6.1`，`output: 'static'` 纯静态输出） |
 | 语言 | TypeScript `^5.8.2`（`astro check`） |
 | 样式 | Tailwind CSS 3（`tailwindcss ^3.4.17`，经 `@astrojs/tailwind` 集成） |
-| i18n | Astro 内置 i18n 配置（`zh` / `en`，默认 `zh`）+ 自维护字典 `src/i18n/ui.ts` 与工具函数 `src/i18n/utils.ts` |
+| i18n | Astro 内置 i18n 配置（`zh` / `en`，默认 `en`）+ 自维护字典 `src/i18n/ui.ts` 与工具函数 `src/i18n/utils.ts` |
 | SEO | `@astrojs/sitemap`（带 i18n 配置）、`src/components/SEO.astro`、`public/robots.txt`、`public/llms.txt` / `llms-full.txt`（GEO） |
 | 图标 | `astro-icon`（icon 目录配置为 `src/icons`） |
 | 包管理器 | pnpm（仓库带 `pnpm-lock.yaml`） |
@@ -53,16 +53,15 @@ shareit-landing/
 
 ## 路由说明
 
-i18n 配置为 `locales: ['zh', 'en']`、`defaultLocale: 'zh'`、`prefixDefaultLocale: true`，中英文均带 URL 前缀：
+i18n 配置为 `locales: ['zh', 'en']`、`defaultLocale: 'en'`、`prefixDefaultLocale: false`，英文位于根路径、中文带 `/zh` 前缀：
 
 | 路径 | 说明 |
 |------|------|
-| `/` | 语言检测跳转页：按 `Accept-Language` 用 meta refresh 跳转到 `/zh` 或 `/en`（缺省到 `/zh`） |
+| `/` | 英文首页（默认语言，无 URL 前缀） |
+| `/privacy`、`/terms` | 英文隐私政策 / 服务条款 |
 | `/zh` | 中文首页 |
 | `/zh/privacy`、`/zh/terms` | 中文隐私政策 / 服务条款 |
-| `/en` | 英文首页 |
-| `/en/privacy`、`/en/terms` | 英文隐私政策 / 服务条款 |
-| `/404` | 404 页面 |
+| `/404` | 404 页面（英文） |
 
 另由 sitemap 集成生成带 hreflang 的 `sitemap-index.xml`；语言切换链接由 `src/i18n/utils.ts` 的 `getLocalizedUrl` 生成互指 URL。
 

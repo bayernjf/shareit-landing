@@ -1,33 +1,33 @@
 ---
 import { translations, type Locale } from '../i18n/ui';
-import { getLocalizedUrl, getLocaleFromUrl } from '../i18n/utils';
+import { localizedPath } from '../i18n/utils';
 
 interface Props {
-  /** 当前 locale */
+  /** current locale */
   locale: Locale;
-  /** 页面相对路径，不含 locale 前缀，如 '' 或 'features' */
+  /** page relative path without locale prefix, e.g. '' or 'features' */
   path?: string;
-  /** 覆盖标题（默认用站点名） */
+  /** override title (defaults to site name) */
   title?: string;
-  /** 覆盖描述 */
+  /** override description */
   description?: string;
 }
 
 const { locale, path = '', title, description } = Astro.props;
 const tr = translations[locale];
 const site = Astro.site ?? new URL('https://shareit-landing.pages.dev');
-const canonicalURL = new URL(`/${locale}${path ? '/' + path : ''}`, site);
+const canonicalURL = new URL(localizedPath(path, locale), site);
 
-// 跨语言 hreflang 互指
+// Cross-language hreflang alternates
 const alternates = (['zh', 'en'] as Locale[]).map((l) => ({
   hreflang: l === 'zh' ? 'zh-CN' : 'en-US',
-  url: new URL(`/${l}${path ? '/' + path : ''}`, site).href,
+  url: new URL(localizedPath(path, l), site).href,
 }));
 
 const pageTitle = title ?? tr.siteName;
 const pageDescription = description ?? tr.siteDescription;
 
-// JSON-LD 结构化数据
+// JSON-LD structured data
 const orgJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
@@ -75,16 +75,16 @@ const faqJsonLd = {
 };
 ---
 
-<!-- 基础 meta -->
+<!-- Base meta -->
 <title>{pageTitle}</title>
 <meta name="description" content={pageDescription} />
 <link rel="canonical" href={canonicalURL.href} />
 
-<!-- hreflang 互指 -->
+<!-- hreflang alternates -->
 {alternates.map((alt) => (
   <link rel="alternate" hreflang={alt.hreflang} href={alt.url} />
 ))}
-<link rel="alternate" hreflang="x-default" href={new URL('/zh', site).href} />
+<link rel="alternate" hreflang="x-default" href={new URL(localizedPath(path, 'en'), site).href} />
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
@@ -104,7 +104,7 @@ const faqJsonLd = {
 <meta name="twitter:description" content={pageDescription} />
 <meta name="twitter:image" content={new URL('/og-default.jpg', site).href} />
 
-<!-- JSON-LD 结构化数据 -->
+<!-- JSON-LD structured data -->
 <script type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
 <script type="application/ld+json" set:html={JSON.stringify(websiteJsonLd)} />
 <script type="application/ld+json" set:html={JSON.stringify(appJsonLd)} />

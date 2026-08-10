@@ -12,5 +12,5 @@ ShareIt is a privacy-first family photo and video sharing app that makes sharing
 
 ## Links
 - [中文站](https://shareit-landing.pages.dev/zh)
-- [English](https://shareit-landing.pages.dev/en)
+- [English](https://shareit-landing.pages.dev/)
 - [Full docs for AI](https://shareit-landing.pages.dev/llms-full.txt)

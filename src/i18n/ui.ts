@@ -5,7 +5,7 @@ export const languages: Record<Locale, string> = {
   en: 'English',
 };
 
-export const defaultLocale: Locale = 'zh';
+export const defaultLocale: Locale = 'en';
 
 export type FaqItem = { q: string; a: string };
 export type FeatureItem = { icon: string; title: string; desc: string };
