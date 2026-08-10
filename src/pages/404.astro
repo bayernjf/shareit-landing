@@ -1,0 +1,26 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { useTranslations } from '../i18n/utils';
+
+const tr = useTranslations(Astro.url);
+const isZh = tr.htmlLang === 'zh-CN';
+const locale = isZh ? 'zh' : 'en';
+const title = isZh
+  ? `404: 页面不存在 | ${tr.siteShortName}`
+  : `404: Page Not Found | ${tr.siteShortName}`;
+---
+
+<BaseLayout title={title}>
+  <section class="container py-24 text-center md:py-32">
+    <p class="font-mono text-sm font-medium uppercase tracking-widest text-brand-600">404</p>
+    <h1 class="mt-4 text-3xl font-bold text-ink-900 sm:text-4xl">
+      {isZh ? '页面不存在' : 'Page not found'}
+    </h1>
+    <p class="mt-3 text-ink-500">
+      {isZh
+        ? '你访问的页面不存在，或者已经被移动。'
+        : 'The page you are looking for does not exist or has been moved.'}
+    </p>
+    <a href={`/${locale}`} class="btn-primary mt-8">{isZh ? '回到首页' : 'Back to Home'}</a>
+  </section>
+</BaseLayout>

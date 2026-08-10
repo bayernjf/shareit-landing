@@ -17,3 +17,6 @@ pnpm-debug.log*
 
 # local npm registry (keep your own)
 .npmrc
+
+dev*.log
+dev*.err.log

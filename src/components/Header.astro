@@ -33,6 +33,7 @@ const navItems = [
 
     <div class="flex items-center gap-2">
       <LanguageSwitcher />
+      <a href="https://bayjf.com" target="_blank" rel="noopener noreferrer" class="hidden rounded-lg px-3 py-2 text-sm text-ink-600 transition hover:bg-ink-50 hover:text-ink-900 md:inline-flex">BayJF</a>
       <a href={`/${locale}#contact`} class="btn-primary hidden sm:inline-flex">{tr.navCta}</a>
       <button
         id="menu-toggle"
@@ -52,6 +53,7 @@ const navItems = [
       {navItems.map((item) => (
         <a href={item.href} class="rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-ink-50">{item.label}</a>
       ))}
+      <a href="https://bayjf.com" target="_blank" rel="noopener noreferrer" class="rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-ink-50">BayJF</a>
       <a href={`/${locale}#contact`} class="btn-primary mt-2">{tr.navCta}</a>
     </div>
   </nav>

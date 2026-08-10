@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'Terms of Service | ShareIt';
+const description = 'ShareIt Terms of Service: the agreement covering use of this site and its content.';
+---
+
+<BaseLayout title={title} description={description} path="terms">
+  <section class="container py-16 md:py-20">
+    <div class="mx-auto max-w-3xl">
+      <h1 class="text-3xl font-bold text-ink-900 sm:text-4xl">Terms of Service</h1>
+      <p class="mt-3 text-sm text-ink-400">Last updated: August 7, 2026 · Effective date: August 7, 2026</p>
+
+      <div class="mt-10 space-y-8 text-sm leading-7 text-ink-600">
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">1. Acceptance</h2>
+          <p class="mt-2">
+            Welcome to the ShareIt product site (the "Site"). By accessing or using the Site you agree to be bound by these terms. If you do not agree, please do not use the Site.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">2. Site Content</h2>
+          <p class="mt-2">
+            Content on the Site introduces the ShareIt product and is provided "as is"; it may change as the product evolves. Descriptions of features, storage modes, and pricing are informational and subject to the actual product version. We strive for accuracy but make no express or implied warranties regarding completeness or timeliness.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">3. Intellectual Property</h2>
+          <p class="mt-2">
+            The Site's copy, design, and branding belong to the project team and may not be used commercially without permission. Open-source code is governed by the license declared in its repository.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">4. Acceptable Use</h2>
+          <p class="mt-2">
+            Do not use the Site in ways that could harm or disrupt its operation or infringe on others' rights, including malicious scraping, injection attacks, or impersonation of the Site.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">5. Limitation of Liability</h2>
+          <p class="mt-2">
+            To the maximum extent permitted by law, the Site is not liable for any indirect, incidental, or consequential damages arising from use of or inability to use its content. Use of the ShareIt product itself is governed by the agreements within the product.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">6. Changes</h2>
+          <p class="mt-2">
+            These terms may be updated; changes will be posted on this page. Continued use of the Site constitutes acceptance of the updated terms.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="text-lg font-semibold text-ink-900">7. Contact</h2>
+          <p class="mt-2">
+            Questions can be raised via Issues on our
+            <a href="https://github.com/bayernjf/shareit" target="_blank" rel="noopener noreferrer" class="text-brand-600 hover:text-brand-700">GitHub repository</a>.
+          </p>
+        </section>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

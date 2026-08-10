@@ -279,7 +279,7 @@ const en: Translation = {
   painEyebrow: 'Why ShareIt',
   painTitle: 'Sharing with family should not feel risky',
   painSubtitle:
-    'Behind every family share hides an unspoken worry — ShareIt resolves them.',
+    'Behind every family share hides an unspoken worry; ShareIt resolves them.',
   painPoints: [
     {
       icon: 'clock',
@@ -294,7 +294,7 @@ const en: Translation = {
     {
       icon: 'heart',
       title: 'Image out of control',
-      desc: 'A casual photo can be forwarded to relatives or social circles — your image is no longer your own.',
+      desc: 'A casual photo can be forwarded to relatives or social circles; your image is no longer your own.',
     },
   ],
 
@@ -308,7 +308,7 @@ const en: Translation = {
     },
     {
       title: 'Delayed regret window',
-      desc: 'Sharing is not instant — there is a window to regret. Want to undo? You still can.',
+      desc: 'Sharing is not instant: there is a window to regret. Want to undo? You still can.',
     },
     {
       title: 'Role & image protection',
@@ -323,7 +323,7 @@ const en: Translation = {
     {
       icon: 'clock',
       title: 'Delayed confirmation delivery',
-      desc: 'No instant delivery — undo with one tap during the regret window, no more post-share regret.',
+      desc: 'No instant delivery: undo with one tap during the regret window, no more post-share regret.',
     },
     {
       icon: 'users',
@@ -338,7 +338,7 @@ const en: Translation = {
     {
       icon: 'database',
       title: 'Flexible storage modes',
-      desc: 'Free mode auto-expires, member mode keeps forever — choose on demand, no waste.',
+      desc: 'Free mode auto-expires, member mode keeps forever: choose on demand, no waste.',
     },
   ],
 
@@ -373,11 +373,11 @@ const en: Translation = {
     },
     {
       q: 'What is the "delayed regret window"?',
-      a: 'After you share content, the system does not deliver it instantly — it leaves a regret window during which you can undo the share at any time, avoiding the awkwardness of impulsive or mistaken shares.',
+      a: 'After you share content, the system does not deliver it instantly; it leaves a regret window during which you can undo the share at any time, avoiding the awkwardness of impulsive or mistaken shares.',
     },
     {
       q: 'How do role permissions work?',
-      a: 'ShareIt separates "child" and "elder" roles. You can selectively share certain content only with elders, or only with the kids, without cross-interference — each sees their own.',
+      a: 'ShareIt separates "child" and "elder" roles. You can selectively share certain content only with elders, or only with the kids, without cross-interference: each sees their own.',
     },
     {
       q: 'How is "image-protected" content handled?',
@@ -385,7 +385,7 @@ const en: Translation = {
     },
     {
       q: 'What is the difference between Free and Permanent storage?',
-      a: 'In Free mode, shared content auto-expires after a period — ideal for temporary shares. Permanent storage requires a membership and keeps content forever — ideal for treasured memories. Both include the full privacy protection mechanism.',
+      a: 'In Free mode, shared content auto-expires after a period, ideal for temporary shares. Permanent storage requires a membership and keeps content forever, ideal for treasured memories. Both include the full privacy protection mechanism.',
     },
     {
       q: 'Is my content safe?',
