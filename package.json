@@ -6,10 +6,11 @@
   "description": "ShareIt landing page - privacy-first family photo/video sharing",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/shot.mjs",
     "preview": "astro preview",
     "astro": "astro",
-    "check": "astro check"
+    "check": "astro check",
+    "shot": "node scripts/shot.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
-    "typescript": "^5.8.2"
+    "typescript": "^5.8.2",
+    "playwright": "^1.62.1"
   }
 }
