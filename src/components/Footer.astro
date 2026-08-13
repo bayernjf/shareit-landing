@@ -1,5 +1,6 @@
 ---
 import BayjfLink from '@bay/landing-ui/components/BayjfLink.astro';
+import StarOnGithub from '@bay/landing-ui/components/StarOnGithub.astro';
 import { useTranslations, localizedPath } from '../i18n/utils';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 
@@ -49,11 +50,11 @@ const year = new Date().getFullYear();
 
     <div class="mt-12 flex flex-col items-center justify-between gap-3 border-t border-ink-200 pt-6 text-xs text-ink-400 sm:flex-row">
       <p>&copy; {year} {tr.footerCopyright}</p>
-      <div class="flex gap-4">
-        <a href="https://github.com/bayernjf/shareit" target="_blank" rel="noopener noreferrer" class="hover:text-ink-600">GitHub</a>
+      <div class="flex items-center gap-4">
         <a href={privacyPath} class="hover:text-ink-600">{tr.footerLegalPrivacy}</a>
         <a href={termsPath} class="hover:text-ink-600">{tr.footerLegalTerms}</a>
         <BayjfLink size={16} class="hover:text-ink-600" />
+        <StarOnGithub href="https://github.com/bayernjf/shareit" size={14} />
       </div>
     </div>
   </div>

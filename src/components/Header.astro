@@ -1,5 +1,6 @@
 ---
 import BayjfLink from '@bay/landing-ui/components/BayjfLink.astro';
+import StarOnGithub from '@bay/landing-ui/components/StarOnGithub.astro';
 import { useTranslations, localizedPath } from '../i18n/utils';
 import LanguageSwitcher from './LanguageSwitcher.astro';
 
@@ -36,6 +37,7 @@ const navItems = [
     <div class="flex items-center gap-2">
       <LanguageSwitcher />
       <BayjfLink size={18} class="hidden rounded-lg px-3 py-2 text-sm text-ink-600 transition hover:bg-ink-50 hover:text-ink-900 md:inline-flex" />
+      <StarOnGithub href="https://github.com/bayernjf/shareit" size={15} class="hidden text-ink-600 md:inline-flex" />
       <a href={`${homePath}#contact`} class="btn-primary hidden sm:inline-flex">{tr.navCta}</a>
       <button
         id="menu-toggle"
@@ -56,6 +58,7 @@ const navItems = [
         <a href={item.href} class="rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-ink-50">{item.label}</a>
       ))}
       <BayjfLink size={18} class="rounded-lg px-3 py-2.5 text-sm text-ink-700 hover:bg-ink-50" />
+      <StarOnGithub href="https://github.com/bayernjf/shareit" size={15} class="mt-1 self-start text-ink-700" />
       <a href={`${homePath}#contact`} class="btn-primary mt-2">{tr.navCta}</a>
     </div>
   </nav>
