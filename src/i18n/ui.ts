@@ -247,7 +247,7 @@ const zh: Translation = {
   footerLegalPrivacy: '隐私政策',
   footerLegalTerms: '服务条款',
   footerCopyright: 'ShareIt. 保留所有权利。',
-  footerContactEmail: 'hello@shareit.app',
+  footerContactEmail: 'b4yernjf@gmail.com',
   footerLangLabel: '语言',
 };
 
@@ -406,7 +406,7 @@ const en: Translation = {
   footerLegalPrivacy: 'Privacy Policy',
   footerLegalTerms: 'Terms of Service',
   footerCopyright: 'ShareIt. All rights reserved.',
-  footerContactEmail: 'hello@shareit.app',
+  footerContactEmail: 'b4yernjf@gmail.com',
   footerLangLabel: 'Language',
 };
 
