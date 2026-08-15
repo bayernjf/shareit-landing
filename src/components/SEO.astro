@@ -15,7 +15,7 @@ interface Props {
 
 const { locale, path = '', title, description } = Astro.props;
 const tr = translations[locale];
-const site = Astro.site ?? new URL('https://shareit-landing.pages.dev');
+const site = Astro.site ?? new URL('https://shareit.bayjf.com');
 const canonicalURL = new URL(localizedPath(path, locale), site);
 
 // Cross-language hreflang alternates
