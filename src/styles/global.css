@@ -65,6 +65,9 @@
   .btn-primary {
     @apply inline-flex items-center justify-center rounded-full bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-brand-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-400 focus-visible:ring-offset-2;
   }
+  .btn-disabled {
+    @apply inline-flex cursor-not-allowed items-center justify-center rounded-full bg-ink-200 px-6 py-3 text-sm font-semibold text-ink-400;
+  }
   .btn-secondary {
     @apply inline-flex items-center justify-center rounded-full border border-ink-200 bg-white px-6 py-3 text-sm font-semibold text-ink-700 transition hover:border-ink-300 hover:bg-ink-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-ink-200 focus-visible:ring-offset-2;
   }

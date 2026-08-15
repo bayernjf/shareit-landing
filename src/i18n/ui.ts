@@ -31,6 +31,8 @@ export interface Translation {
   heroTitle: string;
   heroHighlight: string;
   heroSubtitle: string;
+  heroAppCta: string;
+  comingSoon: string;
   heroPrimaryCta: string;
   heroSecondaryCta: string;
   heroNote: string;
@@ -114,6 +116,8 @@ const zh: Translation = {
   heroHighlight: '隐私有边界',
   heroSubtitle:
     'ShareIt 让你安心地把生活分享给家人。延时确认给你反悔的机会，角色权限让内容只给对的人看，形象保护让每一次分享都妥帖。',
+  heroAppCta: '打开应用',
+  comingSoon: '即将上架',
   heroPrimaryCta: '了解更多',
   heroSecondaryCta: '联系团队',
   heroNote: '面向子女与长辈的双向分享 · 隐私优先设计',
@@ -272,6 +276,8 @@ const en: Translation = {
   heroHighlight: 'privacy with boundaries',
   heroSubtitle:
     'ShareIt lets you safely share life with family. A delayed confirmation gives you a second chance, role-based permissions keep content with the right people, and image protection makes every share appropriate.',
+  heroAppCta: 'Open the app',
+  comingSoon: 'Coming soon',
   heroPrimaryCta: 'Learn More',
   heroSecondaryCta: 'Contact Team',
   heroNote: 'Two-way sharing for kids and elders · Privacy-first design',

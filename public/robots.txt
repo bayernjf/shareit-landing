@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://shareit-landing.pages.dev/sitemap-index.xml
+Sitemap: https://shareit.bayjf.com/sitemap-index.xml

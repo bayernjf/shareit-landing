@@ -11,6 +11,6 @@ ShareIt is a privacy-first family photo and video sharing app that makes sharing
 - Flexible storage modes: free auto-expiring, or permanent member storage
 
 ## Links
-- [中文站](https://shareit-landing.pages.dev/zh)
-- [English](https://shareit-landing.pages.dev/)
-- [Full docs for AI](https://shareit-landing.pages.dev/llms-full.txt)
+- [中文站](https://shareit.bayjf.com/zh)
+- [English](https://shareit.bayjf.com/)
+- [Full docs for AI](https://shareit.bayjf.com/llms-full.txt)

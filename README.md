@@ -70,5 +70,5 @@ i18n 配置为 `locales: ['zh', 'en']`、`defaultLocale: 'en'`、`prefixDefaultL
 部署目标为 **Cloudflare Pages**（见 `wrangler.toml`，项目名 `shareit-landing`）：
 
 - 主推 Cloudflare Pages 原生 Git 集成：在 Dashboard 连接仓库，构建命令 `pnpm build`，输出目录 `dist`，环境变量 `NODE_VERSION=20`
-- `astro.config.mjs` 的 `site` 当前为 `https://shareit-landing.pages.dev`，绑定自定义域名时需同步更新
+- `astro.config.mjs` 的 `site` 当前为 `https://shareit.bayjf.com`，绑定自定义域名时需同步更新
 - `wrangler.toml` 亦可用于 wrangler CLI 部署（可选）
