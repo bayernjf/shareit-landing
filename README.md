@@ -6,22 +6,22 @@ ShareIt 是一款隐私优先的家庭照片/视频私密分享 App，本仓库�
 
 | 类别 | 技术 |
 |------|------|
-| 框架 | Astro 5（`astro ^5.6.1`，`output: 'static'` 纯静态输出） |
+| 框架 | Astro 7（`astro ^7.2.0`，`output: 'static'` 纯静态输出） |
 | 语言 | TypeScript `^5.8.2`（`astro check`） |
-| 样式 | Tailwind CSS 3（`tailwindcss ^3.4.17`，经 `@astrojs/tailwind` 集成） |
+| 样式 | Tailwind CSS 4（`tailwindcss ^4.3.3`，经 `@tailwindcss/vite` 集成） |
 | i18n | Astro 内置 i18n 配置（`zh` / `en`，默认 `en`）+ 自维护字典 `src/i18n/ui.ts` 与工具函数 `src/i18n/utils.ts` |
 | SEO | `@astrojs/sitemap`（带 i18n 配置）、`src/components/SEO.astro`、`public/robots.txt`、`public/llms.txt` / `llms-full.txt`（GEO） |
 | 图标 | `astro-icon`（icon 目录配置为 `src/icons`） |
-| 包管理器 | pnpm（仓库带 `pnpm-lock.yaml`） |
+| 包管理器 | npm（仓库带 `package-lock.json`） |
 
 ## 快速开始
 
 ```bash
-pnpm install       # 安装依赖
-pnpm dev           # 开发服务器（默认 http://localhost:4321）
-pnpm build         # 生产构建（输出到 dist/）
-pnpm preview       # 预览生产构建
-pnpm check         # 类型检查（astro check）
+npm install        # 安装依赖
+npm run dev        # 开发服务器（默认 http://localhost:4321）
+npm run build      # 生产构建（输出到 dist/）
+npm run preview    # 预览生产构建
+npm run check      # 类型检查（astro check）
 ```
 
 ## 项目结构
@@ -69,6 +69,6 @@ i18n 配置为 `locales: ['zh', 'en']`、`defaultLocale: 'en'`、`prefixDefaultL
 
 部署目标为 **Cloudflare Pages**（见 `wrangler.toml`，项目名 `shareit-landing`）：
 
-- 主推 Cloudflare Pages 原生 Git 集成：在 Dashboard 连接仓库，构建命令 `pnpm build`，输出目录 `dist`，环境变量 `NODE_VERSION=20`
+- 主推 Cloudflare Pages 原生 Git 集成：在 Dashboard 连接仓库，构建命令 `npm run build`，输出目录 `dist`，环境变量 `NODE_VERSION=22`（Astro 7 要求 Node >= 22.12）
 - `astro.config.mjs` 的 `site` 当前为 `https://shareit.bayjf.com`，绑定自定义域名时需同步更新
 - `wrangler.toml` 亦可用于 wrangler CLI 部署（可选）
